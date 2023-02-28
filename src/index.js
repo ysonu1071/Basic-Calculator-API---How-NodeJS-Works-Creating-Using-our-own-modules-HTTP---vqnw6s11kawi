@@ -74,7 +74,7 @@ app.post("/add", (req, res) => {
     if(validatedData){
         res.send(validatedData)
     }else{
-        let validateResult = validateData(response.result)
+        let validateResult = validateData(response.sum)
         if (validateResult){
             res.send(validateResult)
         }else{
@@ -96,7 +96,7 @@ app.post("/sub", (req, res) => {
     if(validatedData){
         res.send(validatedData)
     }else{
-        let validateResult = validateData(response.result)
+        let validateResult = validateData(response.difference)
         if (validateResult){
             res.send(validateResult)
         }else{
