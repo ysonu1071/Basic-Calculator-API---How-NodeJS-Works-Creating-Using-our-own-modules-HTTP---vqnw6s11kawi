@@ -74,7 +74,12 @@ app.post("/add", (req, res) => {
     if(validatedData){
         res.send(validatedData)
     }else{
-        res.send(response);
+        let validateResult = validateData(response.result)
+        if (validateResult){
+            res.send(validateResult)
+        }else{
+            res.send(response);
+        }
     }
 })
 
@@ -91,7 +96,12 @@ app.post("/sub", (req, res) => {
     if(validatedData){
         res.send(validatedData)
     }else{
-        res.send(response);
+        let validateResult = validateData(response.result)
+        if (validateResult){
+            res.send(validateResult)
+        }else{
+            res.send(response);
+        }
     }
 })
 
@@ -108,7 +118,12 @@ app.post("/multiply", (req, res) => {
     if(validatedData){
         res.send(validatedData)
     }else{
-        res.send(response);
+        let validateResult = validateData(response.result)
+        if (validateResult){
+            res.send(validateResult)
+        }else{
+            res.send(response);
+        }
     }
 })
 
@@ -130,7 +145,12 @@ app.post("/divide", (req, res) => {
         if(validatedData){
             res.send(validatedData)
         }else{
-            res.send(response);
+            let validateResult = validateData(response.result)
+            if (validateResult){
+                res.send(validateResult)
+            }else{
+                res.send(response);
+            }
         }
         }
 })
